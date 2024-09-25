@@ -13,78 +13,61 @@
 	</head>
 
 	<body>
-
-		<select id="selCountry">
-			<option value="GB">Great Britain</option>
-			<option value="FR">France</option>
-			<option value="DE">Germany</option>
-			<option value="US">USA</option>
-		</select>
-
-		<select id="selLanguage">
-			<option value="en">English</option>
-			<option value="fr">Francais</option>
-			<option value="de">Deutsche</option>
-		</select>
-
-		<button id="btnRun">Run</button>
-
-		<br><br>
-
-		<div id="divResults">
 			
 			<table>
 
 				<tr>
-					<td align="right">
-						Continent: 
+					<td align="middle">
+						<p>Recent earthquakes</p>
 					</td>
-					<td id="txtContinent">
-						
+					<td align="middle">
+						<select id="paramEarthquakes">
+						<option value="one">north=41.76, south=34.81, east=28.25, west=19.37</option> <!--Greece-->
+						<option value="two">north=44.1, south=-9.9, east=-22.4, west=55.2</option>
+						</select>
 					</td>
-
+					<td align="middle">
+						<button id="btnSubmit">Submit</button>
+					</td>
 				</tr>
 
 				<tr>
-					<td align="right">
-						Capital: 
-					</td>
-					<td id="txtCapital">
-						
-					</td>
-
+				<td align="middle">
+					<p>The name of the ocean or the sea</p>
+				</td>
+				<td align="middle">
+					<select id="paramOceans">
+					<option value="one">lat=39.01920, lng=25.26860</option> <!--The Agean Sea-->
+					<option value="two">lat=56.51100, lng=3.51560</option> <!--The North Sea-->
+					</select>
+				</td>
+				<td align="middle">
+					<button id="btnSubmit">Submit</button>
+				</td>
 				</tr>
 
 				<tr>
-					<td align="right">
-						Languages: 
-					</td>
-					<td id="txtLanguages">
-						
-					</td>
-
+				<td align="middle">	
+					<p>Weather stations with the most recent weather observation</p>
+				</td>
+				<td align="middle">
+					<select id="paramWeather">
+					<option value="one">north=60.85, south=49.91, east=1.76, west=-8.62</option> <!--The UK-->
+					<option value="two">north=44.1, south=-9.9, east=-22.4, west=55.2</option>
+					</select>
+				</td>
+				<td align="middle">
+					<button id="btnSubmit">Submit</button>
+				</td>
 				</tr>
 
 				<tr>
-					<td align="right">
-						Population: 
+					<td align="middle">
+						<p>Results:</p> 
 					</td>
-					<td id="txtPopulation">
-						
+					<td id="txtResults">
 					</td>
-
 				</tr>
-
-				<tr>
-					<td align="right">
-						Area (km<sup>2</sup>): 
-					</td>
-					<td id="txtArea">
-						
-					</td>
-
-				</tr>
-
 
 			</table>
 
