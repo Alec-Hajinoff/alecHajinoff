@@ -20,12 +20,44 @@
 					<td align="middle">
 						<p>Recent earthquakes</p>
 					</td>
-					<td align="middle">
-						<select id="paramEarthquakes">
-						<option value="41.76,34.81,28.25,19.37">north=41.76, south=34.81, east=28.25, west=19.37</option> <!--Greece-->
-						<option value="44.1,-9.9,-22.4,55.2">north=44.1, south=-9.9, east=-22.4, west=55.2</option>
+
+					<td align="right">
+						<select id="paramNorth">
+						<option value="41.76">north=41.76</option>
+						<option value="44.1">north=44.1</option>
 						</select>
 					</td>
+
+					<td align="right">
+						<select id="paramSouth">
+						<option value="34.81">south=34.81</option>
+						<option value="-9.9">south=-9.9</option>
+						</select>
+					</td>
+
+					<td align="right">
+						<select id="paramEast">
+						<option value="28.25">east=28.25</option>
+						<option value="-22.4">east=-22.4</option>
+						</select>
+					</td>
+
+					<td align="right">
+						<select id="paramWest">
+						<option value="19.37">west=19.37</option>
+						<option value="55.2">west=55.2</option>
+						</select>
+					</td>
+
+					<!--
+					<td align="middle">
+						<select id="paramEarthquakes">
+						<option value="north=41.76&south=34.81&east=28.25&west=19.37">north=41.76, south=34.81, east=28.25, west=19.37</option> Greece
+						<option value="north=44.1&south=-9.9&east=-22.4&west=55.2">north=44.1, south=-9.9, east=-22.4, west=55.2</option>
+						</select>
+					</td>
+					-->
+
 					<td align="middle">
 						<button id="btnSubmitOne">Submit</button>
 					</td>

@@ -5,10 +5,10 @@
 			type: 'POST',
 			dataType: 'json',
 			data: {
-				north: $('#paramEarthquakes').val(),
-				south: $('#paramEarthquakes').val(),
-				east: $('#paramEarthquakes').val(),
-				west: $('#paramEarthquakes').val()
+				north: $('#paramNorth').val(),
+				south: $('#paramSouth').val(),
+				east: $('#paramEast').val(),
+				west: $('#paramWest').val()
 			},
 			
 			success: function(result) {
