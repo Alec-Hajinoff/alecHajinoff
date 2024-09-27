@@ -13,96 +13,105 @@
 	</head>
 
 	<body>
-			
 			<table>
-
 				<tr>
 					<td align="middle">
 						<p>Recent earthquakes</p>
 					</td>
-
-					<td align="right">
+					<td align="middle">
 						<select id="paramNorth">
 						<option value="41.76">north=area_one</option> <!--Greece-->
 						<option value="44.1">north=area_two</option> <!--Unknown area provided by the API-->
 						</select>
 					</td>
-
-					<td align="right">
+					<td align="middle">
 						<select id="paramSouth">
 						<option value="34.81">south=area_one</option> <!--Greece-->
 						<option value="-9.9">south=area_two</option> <!--Unknown area provided by the API-->
 						</select>
 					</td>
-
-					<td align="right">
+					<td align="middle">
 						<select id="paramEast">
 						<option value="28.25">east=area_one</option> <!--Greece-->
 						<option value="-22.4">east=area_two</option> <!--Unknown area provided by the API-->
 						</select>
 					</td>
-
-					<td align="right">
+					<td align="middle">
 						<select id="paramWest">
 						<option value="19.37">west=area_one</option> <!--Greece-->
 						<option value="55.2">west=area_two</option> <!--Unknown area provided by the API--> 
 						</select>
 					</td>
-
-					<!--
-					<td align="middle">
-						<select id="paramEarthquakes">
-						<option value="north=41.76&south=34.81&east=28.25&west=19.37">north=41.76, south=34.81, east=28.25, west=19.37</option> Greece
-						<option value="north=44.1&south=-9.9&east=-22.4&west=55.2">north=44.1, south=-9.9, east=-22.4, west=55.2</option>
-						</select>
-					</td>
-					-->
-
 					<td align="middle">
 						<button id="btnSubmitOne">Submit</button>
 					</td>
 				</tr>
-
 				<tr>
 				<td align="middle">
 					<p>The name of the ocean or the sea</p>
 				</td>
 				<td align="middle">
-					<select id="paramOceans">
-					<option value="one">lat=39.01920, lng=25.26860</option> <!--The Agean Sea-->
-					<option value="two">lat=56.51100, lng=3.51560</option> <!--The North Sea-->
+					<select id="paramLat">
+					<option value="39.01920">latitude=area_one</option> <!--The Agean Sea-->
+					<option value="56.51100">latitude=area_two</option> <!--The North Sea--> 
 					</select>
+				</td>
+				<td align="middle">
+					<select id="paramLng">
+					<option value="25.26860">longitude=area_one</option> <!--The Agean Sea-->
+					<option value="3.51560">longitude=area_two</option> <!--The North Sea--> 
+					</select>
+				</td>
+				<td align="middle">
+				</td>
+				<td align="middle">
 				</td>
 				<td align="middle">
 					<button id="btnSubmitTwo">Submit</button>
 				</td>
 				</tr>
-
 				<tr>
 				<td align="middle">	
 					<p>Weather stations with the most recent weather observation</p>
 				</td>
 				<td align="middle">
-					<select id="paramWeather">
-					<option value="one">north=60.85, south=49.91, east=1.76, west=-8.62</option> <!--The UK-->
-					<option value="two">north=44.1, south=-9.9, east=-22.4, west=55.2</option>
+					<select id="paramNorthWeather">
+					<option value="60.85">north=area_one</option> <!--The UK-->
+					<option value="44.1">north=area_two</option> <!--Unknown area provided by the API-->
+					</select>
+				</td>
+				<td align="middle">
+					<select id="paramSouthWeather">
+					<option value="49.91">south=area_one</option> <!--The UK-->
+					<option value="-9.9">south=area_two</option> <!--Unknown area provided by the API-->
+					</select>
+				</td>
+				<td align="middle">
+					<select id="paramEastWeather">
+					<option value="1.76">east=area_one</option> <!--The UK-->
+					<option value="-22.4">east=area_two</option> <!--Unknown area provided by the API-->
+					</select>
+				</td>
+				<td align="middle">
+					<select id="paramWestWeather">
+					<option value="-8.62">west=area_one</option> <!--The UK-->
+					<option value="55.2">west=area_two</option> <!--Unknown area provided by the API-->
 					</select>
 				</td>
 				<td align="middle">
 					<button id="btnSubmitThree">Submit</button>
 				</td>
 				</tr>
-
 				<tr>
 					<td align="middle">
 						<p>Results:</p> 
 					</td>
-					<td id="txtResults">
+				</tr>
+				<tr>
+					<td id="txtResults" align="middle">
 					</td>
 				</tr>
-
 			</table>
-
 		</div>
 		<!--
 		<select id="selCountry">
