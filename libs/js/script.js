@@ -58,8 +58,7 @@
 	
 	});
 
-
-	/*
+	$('#btnSubmitThree').click(function() {
 	$.ajax({
 			url: "libs/php/getCountryInfoWeather.php",
 			type: 'POST',
@@ -86,13 +85,6 @@
 				console.log("This enquiry did not produce results:-(");
 			}
 		});
-	*/
-	$('#btnSubmitThree').click(function() {
-
-		console.log("Hi there");
-		$('#txtResults').html("Hello");
-		
-	
 	});
 
 	/*
