@@ -61,7 +61,7 @@
 	$('#btnSubmitThree').click(function() {
 
 		$.ajax({
-			url: "libs\php\getCountryInfoWeather.php",
+			url: "libs/php/getCountryInfoWeather.php",
 			type: 'POST',
 			dataType: 'json',
 			data: {
