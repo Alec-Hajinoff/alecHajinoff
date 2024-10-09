@@ -1,0 +1,98 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+		<!--
+		This app is to demo an API call using different parameters selected by a user, using input tags of type number.
+
+		When the "Submit" button is clicked this runs the Ajax call from script.js to getCountryInfo.php (or other php files) using the API data parameters.
+		If the returning data from getCountryInfo.php (or other php files) is OK, it gets written into the "Results:" section of index.html.
+		-->
+		<meta charset="utf-8">
+		<title>AJAX/PHP/CURL/JSON example</title>
+		<meta name="description" content="AJAX/PHP/CURL/JSON example">
+		<meta name="author" content="Paddy Evans">
+
+	</head>
+
+	<body>
+
+		<h4>Recent earthquakes</h4>
+
+		<label>Area north bound (for example enter '41.76' for Greece, or '44.1' for Greenland):</label>
+  		<input type="number" id="paramNorth" value="">
+			
+		<br><br>
+			
+		<label>Area south bound (for example enter '34.81' for Greece, or '-9.9' for Greenland):</label>
+		<input type="number" id="paramSouth" value="">
+
+		<br><br>
+
+		<label>Area east bound (for example enter '28.25' for Greece, or '-22.4' for Greenland):</label>
+		<input type="number" id="paramEast" value="">
+
+		<br><br>
+
+		<label>Area west bound (for example enter '19.37' for Greece, or '55.2' for Greenland):</label>
+		<input type="number" id="paramWest" value="">
+
+		<br><br>
+
+		<button id="btnSubmitOne">Submit</button>
+
+		<h4>The name of the ocean or the sea</h4>
+
+		<label>Area latitude (for example enter '39.01920' for the Agean Sea, or '56.51100' for the North Sea):</label>
+  		<input type="number" id="paramLat" value="">
+
+		<br><br>
+
+		<label>Area longitude (for example enter '25.26860' for the Agean Sea, or '3.51560' for the North Sea):</label>
+  		<input type="number" id="paramLng" value="">
+
+		<br><br>
+
+		<button id="btnSubmitTwo">Submit</button>
+
+		<h4>Weather stations with the most recent weather observation</h4>
+
+		<label>Area north bound (for example enter '60.85' for the UK, or '44.1' for Greenland):</label>
+  		<input type="number" id="paramNorthWeather" value="">
+			
+		<br><br>
+
+		<label>Area south bound (for example enter '49.91' for the UK, or '-9.9' for Greenland):</label>
+		<input type="number" id="paramSouthWeather" value="">
+
+		<br><br>
+
+		<label>Area east bound (for example enter '1.76' for the UK, or '-22.4' for Greenland):</label>
+		<input type="number" id="paramEastWeather" value="">
+
+		<br><br>
+
+		<label>Area west bound (for example enter '-8.62' for the UK, or '55.2' for Greenland):</label>
+		<input type="number" id="paramWestWeather" value="">
+
+		<br><br>
+
+		<button id="btnSubmitThree">Submit</button>
+
+		<table>
+			<tr>
+				<td>
+					<h4>Results of your query:</h4> 
+				</td>
+				<td id="txtResults"></td>
+				</td>
+			</tr>
+		</table>
+
+		<script type="application/javascript" src="libs/js/jquery-2.2.3.min.js"></script>
+		<script type="application/javascript" src="libs/js/script.js"></script>
+
+	</body>
+
+</html>
