@@ -12,12 +12,12 @@
 			},
 			
 			success: function(result) {
-				
+
 				console.log(JSON.stringify(result));
 
 				if (result.status.name == "ok") {
 					
-				$('#txtResults').html(JSON.stringify(result['data']));
+					$('#txtResults').html(JSON.stringify(result['data']));
 
 				}
 			
