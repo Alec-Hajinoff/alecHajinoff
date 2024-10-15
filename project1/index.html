@@ -14,6 +14,28 @@
   <body> 
     <p align="center">Project #1 "Gazetteer"</p> 
     <p id="one" align="center"></p>
+    <br>
+    <div><!--Choose a country drop down-->
+      <form action="/action_page.php">
+        <label for="country">Choose a country to see its map and country information:</label>
+        <select name="country" id="country">
+          <option value="Greece">Greece</option>
+          <option value="Ukraine">Ukraine</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <br>
+    <div id="display"><!--Map display-->
+    </div>
+    <br>
+    <div><!--Country data display-->
+      <p>Country name:</p>
+      <p></p>
+      <p>Country capital:</p>
+      <p></p>
+    </div>
     <script src="libs\js\script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
