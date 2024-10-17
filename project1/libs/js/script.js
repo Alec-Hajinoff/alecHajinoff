@@ -3,19 +3,11 @@ document.getElementById("one").innerHTML = d;
 var two = document.getElementById("CountryName");
 navigator.geolocation.getCurrentPosition(success, fail);
 function success(pos) {
-    msg = "Longitude: " + pos.coords.longitude + " " + "Latitude: " + pos.coords.latitude;
-    two.innerHTML = msg;
-}
-function fail() {
-    msg = "Sorry, we couldn't get your location!";
-    two.innerHTML = msg;
-}
-$('#btnSubmitOne').click(function() {
     $.ajax({
-        url: "libs/php/getCountryInfo.php",
+        url: "libs/php/getCountryMap.php",
         type: 'POST',
         dataType: 'json',
-        data: {
+        results: {
             north: $('#paramNorth').val(),
             south: $('#paramSouth').val(),
             east: $('#paramEast').val(),
@@ -31,4 +23,10 @@ $('#btnSubmitOne').click(function() {
             console.log("This enquiry did not produce results:-(");
         }
     });
-});
+    //msg = "Longitude: " + pos.coords.longitude + " " + "Latitude: " + pos.coords.latitude;
+    //two.innerHTML = msg;
+}
+function fail() {
+    msg = "Sorry, we couldn't get your location!";
+    two.innerHTML = msg;
+}
