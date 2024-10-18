@@ -8,8 +8,8 @@ function success(pos) {
         type: 'GET',
         dataType: 'json',
         data: {
-            latitude: pos.coords.latitude,
-            longitude: pos.coords.longitude,
+            latitude: "pos.coords.latitude",
+            longitude: "pos.coords.longitude"
         },
         success: function(result) {
             console.log(JSON.stringify(result['data']));
