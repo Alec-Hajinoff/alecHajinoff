@@ -2,7 +2,7 @@
     ini_set('display_errors', 'On');
 	error_reporting(E_ALL);
 	$executionStartTime = microtime(true);
-	$url='http://api.geonames.org/earthquakesJSON?north=' . $_REQUEST['north'] . '&south=' . $_REQUEST['south'] . '&east=' . $_REQUEST['east'] . '&west=' . $_REQUEST['west'] . '&username=hertford_networks';
+	$url='https://api.opencagedata.com/geocode/v1/json?q=' . $_REQUEST['latitude'] . '%2C' . $_REQUEST['longitude'] . '&key=a7f882d3ba784ed39e3ceed781eb6b3c';
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -14,7 +14,7 @@
 	$output['status']['name'] = "ok";
 	$output['status']['description'] = "success";
 	$output['status']['returnedIn'] = intval((microtime(true) - $executionStartTime) * 1000) . " ms";
-	$output['data'] = $decode['earthquakes'];
+	$output['data'] = $decode['geocode'];
 	header('Content-Type: application/json; charset=UTF-8');
 	echo json_encode($output);
 ?>
