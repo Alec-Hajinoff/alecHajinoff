@@ -1,4 +1,4 @@
-let d = new Date()
+let d = new Date();
 document.getElementById("one").innerHTML = d;
 var two = document.getElementById("CountryName");
 navigator.geolocation.getCurrentPosition(success, fail);
@@ -25,6 +25,6 @@ function success(pos) {
     //two.innerHTML = msg;
 }
 function fail() {
-    msg = "Sorry, we couldn't get your location!";
+    var msg = "Sorry, we couldn't get your location!";
     two.innerHTML = msg;
 }
