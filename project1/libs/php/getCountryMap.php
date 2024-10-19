@@ -2,7 +2,7 @@
     ini_set('display_errors', 'On');
 	error_reporting(E_ALL);
 	$executionStartTime = microtime(true);
-	$url='https://api.opencagedata.com/geocode/v1/json?q=' . $_REQUEST['latitude'] . '%2C+' . $_REQUEST['longitude'] . '&key=a7f882d3ba784ed39e3ceed781eb6b3c';
+	$url='https://api.opencagedata.com/geocode/v1/json?q=' . $_REQUEST['latitude'] . '%2C' . $_REQUEST['longitude'] . '&key=a7f882d3ba784ed39e3ceed781eb6b3c';
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
