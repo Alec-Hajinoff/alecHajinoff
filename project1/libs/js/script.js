@@ -12,17 +12,15 @@ function success(pos) {
             'longitude': pos.coords.longitude
         },
         success: function(result) {
-            console.log(JSON.stringify(result['data']));
+            console.log(JSON.stringify(result.data[0].annotations.OSM.url));
             if (result.status.name == "ok") {  
-            $('#CountryName').html(JSON.stringify(result['data']));
+                $('#CountryName').html(JSON.stringify(result.data[0].annotations.OSM.url));
             }
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.log("This enquiry did not produce results:-(");
         }
     });
-    //msg = "Longitude: " + pos.coords.longitude + " " + "Latitude: " + pos.coords.latitude;
-    //two.innerHTML = msg;
 }
 function fail() {
     var msg = "Sorry, we couldn't get your location!";
