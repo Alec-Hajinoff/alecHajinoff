@@ -3,6 +3,13 @@ document.getElementById("one").innerHTML = d;
 var two = document.getElementById("CountryName");
 navigator.geolocation.getCurrentPosition(success, fail);
 function success(pos) {
+    //Leaflet start:
+    var map = L.map('map').setView([pos.coords.latitude, pos.coords.longitude], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    //Leaflet end!
     $.ajax({
         url: "libs/php/getCountryMap.php",
         type: 'GET',
