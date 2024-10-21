@@ -19,9 +19,9 @@ function success(pos) {
             'longitude': pos.coords.longitude
         },
         success: function(result) {
-            console.log(JSON.stringify(result.data[0].annotations.OSM.url));
+            console.log(JSON.stringify(result.data[0].components.country));
             if (result.status.name == "ok") {  
-                $('#CountryName').html(JSON.stringify(result.data[0].annotations.OSM.url));
+                $('#CountryName').html(JSON.stringify(result.data[0].components.country));
             }
         },
         error: function(jqXHR, textStatus, errorThrown) {
