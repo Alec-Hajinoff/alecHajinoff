@@ -20,30 +20,24 @@
     <p id="one" align="center"></p>
     <br>
     <div><!--Choose a country drop down-->
-      <form action="/action_page.php">
+      <form action="/action_page.php" align="center">
         <label for="country">Choose a country to see its map and country information:</label>
         <select name="country" id="country" autocomplete="off">
-          <option value="Greece">Greece</option>
-          <option value="Ukraine">Ukraine</option>
+          <option value="CountryOne">Country 1</option>
+          <option value="CountryTwo">Country 2</option>
         </select>
-        <br><br>
         <input type="submit" value="Submit">
       </form>
     </div>
     <br>
-    <div id="MapDisplay"><!--Map display-->
-    </div>
-    <div id="map">
-    </div>
-    <div><!--Temporary map display-->
-      <img src="https://www.shutterstock.com/image-vector/map-uk-260nw-618875870.jpg" alt="The map of the UK">
+    <div id="map" align="center"><!--Map display-->
     </div>
     <br>
     <div><!--Country data display-->
-      <p>Country name:</p>
-      <p id="CountryName"></p>
-      <p>Country capital:</p>
-      <p id="CountryCapital"></p>
+      <p align="center">Country name:</p>
+      <p id="CountryName" align="center"></p>
+      <p align="center">Country capital:</p>
+      <p id="CountryCapital" align="center"></p>
     </div>
     <script type="application/javascript" src="libs/js/script.js"></script>
     <script type="application/javascript" src="libs/js/jquery-2.2.3.min.js"></script>
