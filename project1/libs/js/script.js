@@ -11,7 +11,7 @@ function success(pos) {
     }).addTo(map);
     //Leaflet end!
     $.ajax({
-        url: "libs/php/getCountryMap.php",
+        url: "libs/php/getDataOpenCage.php",
         type: 'GET',
         dataType: 'json',
         data: {
@@ -22,6 +22,24 @@ function success(pos) {
             console.log(JSON.stringify(result.data[0].components.country));
             if (result.status.name == "ok") {  
                 $('#CountryName').html(JSON.stringify(result.data[0].components.country));
+            }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log("This enquiry did not produce results:-(");
+        }
+    });
+    $.ajax({
+        url: "libs/php/getDataOpenCage.php",
+        type: 'GET',
+        dataType: 'json',
+        data: {
+            'latitude': pos.coords.latitude,
+            'longitude': pos.coords.longitude
+        },
+        success: function(result) {
+            console.log(JSON.stringify(result.data[0].annotations.currency.iso_code));
+            if (result.status.name == "ok") {  
+                $('#NameOfCurrency').html(JSON.stringify(result.data[0].annotations.currency.iso_code));
             }
         },
         error: function(jqXHR, textStatus, errorThrown) {
