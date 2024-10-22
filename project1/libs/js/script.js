@@ -10,6 +10,7 @@ function success(pos) {
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
     //Leaflet end!
+    //Call to getDataOpenCage.php to fetch Country name, start:
     $.ajax({
         url: "libs/php/getDataOpenCage.php",
         type: 'GET',
@@ -28,6 +29,8 @@ function success(pos) {
             console.log("This enquiry did not produce results:-(");
         }
     });
+    //Call to getDataOpenCage.php to fetch Country name, end!
+    //Call to getDataOpenCage.php to fetch Name of currency, start:
     $.ajax({
         url: "libs/php/getDataOpenCage.php",
         type: 'GET',
@@ -46,6 +49,7 @@ function success(pos) {
             console.log("This enquiry did not produce results:-(");
         }
     });
+    //Call to getDataOpenCage.php to fetch Name of currency, end!
 }
 function fail() {
     var msg = "Sorry, we couldn't get your location!";

@@ -1,4 +1,5 @@
 <?php
+/* Call to api.opencagedata.com to fetch data: Country name & Name of currency*/
     ini_set('display_errors', 'On');
 	error_reporting(E_ALL);
 	$executionStartTime = microtime(true);
