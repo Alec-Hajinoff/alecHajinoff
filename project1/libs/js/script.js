@@ -61,17 +61,38 @@ function success(pos) {
             'longitude': pos.coords.longitude
         },
         success: function(result) {
-            console.log(JSON.stringify(result.data[0].components.country_code));
-            if (result.status.name == "ok") {  
-                var countryCode = html(JSON.stringify(result.data[0].components.country_code));
+            var countryCode = JSON.stringify(result.data[0].components.country_code);
+            return countryCode;
+            //console.log(JSON.stringify(result.data[0].components.country_code));
+            //if (result.status.name == "ok") {  
+                //var countryCode = html(JSON.stringify(result.data[0].components.country_code));
                 //$('#CapitalCity').html(JSON.stringify(result.data[0].components.country_code)); This line of code proves that country_code is returned and is printed to the screen.
-            }
+            //}
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.log("This enquiry did not produce results:-(");
         }
     });
     //Call to getDataOpenCage.php to fetch country_code, end!
+    //Call to getDataGeonames.php to fetch Capital city, start:
+    $.ajax({
+        url: "libs/php/getDataGeonames.php",
+        type: 'POST',
+        dataType: 'json',
+        data: {
+            country: countryCode
+        },
+        success: function(result) {
+            console.log(JSON.stringify(result['data'][0]['capital']));
+            if (result.status.name == "ok") {  
+                $('#CapitalCity').html(JSON.stringify(result['data'][0]['capital']));
+            }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log("This enquiry did not produce results:-(");
+        }
+    });
+    //Call to getDataGeonames.php to fetch Capital city, end!
 }
 function fail() {
     var msg = "Sorry, we couldn't get your location!";
