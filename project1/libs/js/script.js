@@ -50,6 +50,27 @@ function success(pos) {
         }
     });
     //Call to getDataOpenCage.php to fetch Name of currency, end!
+    //Call to getDataOpenCage.php to fetch country_code, start:
+    //The value of country_code will be used in a call to api.geonames.org to fetch Capital city, Population, Country Wikipedia link.
+    $.ajax({
+        url: "libs/php/getDataOpenCage.php",
+        type: 'GET',
+        dataType: 'json',
+        data: {
+            'latitude': pos.coords.latitude,
+            'longitude': pos.coords.longitude
+        },
+        success: function(result) {
+            console.log(JSON.stringify(result.data[0].components.country_code));
+            if (result.status.name == "ok") {  
+                $('#CapitalCity').html(JSON.stringify(result.data[0].components.country_code));
+            }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log("This enquiry did not produce results:-(");
+        }
+    });
+    //Call to getDataOpenCage.php to fetch country_code, end!
 }
 function fail() {
     var msg = "Sorry, we couldn't get your location!";
