@@ -52,6 +52,7 @@ function success(pos) {
     //Call to getDataOpenCage.php to fetch Name of currency, end!
     //Call to getDataOpenCage.php to fetch country_code, start:
     //The value of country_code is stored in countryCode and will be used in a call to api.geonames.org to fetch Capital city, Population, Country Wikipedia link.
+    var countryCode;
     $.ajax({
         url: "libs/php/getDataOpenCage.php",
         type: 'GET',
@@ -61,12 +62,12 @@ function success(pos) {
             'longitude': pos.coords.longitude
         },
         success: function(result) {
-            var countryCode = JSON.stringify(result.data[0].components.country_code);
+            countryCode = JSON.stringify(result.data[0].components.country_code);
             return countryCode;
             //console.log(JSON.stringify(result.data[0].components.country_code));
             //if (result.status.name == "ok") {  
-                //var countryCode = html(JSON.stringify(result.data[0].components.country_code));
-                //$('#CapitalCity').html(JSON.stringify(result.data[0].components.country_code)); This line of code proves that country_code is returned and is printed to the screen.
+            //var countryCode = html(JSON.stringify(result.data[0].components.country_code));
+            //$('#CapitalCity').html(JSON.stringify(result.data[0].components.country_code)); This line of code proves that country_code is returned and is printed to the screen.
             //}
         },
         error: function(jqXHR, textStatus, errorThrown) {
