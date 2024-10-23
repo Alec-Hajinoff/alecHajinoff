@@ -62,7 +62,7 @@ function success(pos) {
             'longitude': pos.coords.longitude
         },
         success: function(result) {
-            countryCode = JSON.stringify(result.data[0].components.country_code);
+            countryCode = JSON.stringify(result.data[0].components.country_code).slice();
             return countryCode;
             //console.log(JSON.stringify(result.data[0].components.country_code));
             //if (result.status.name == "ok") {  
@@ -84,9 +84,9 @@ function success(pos) {
             country: countryCode
         },
         success: function(result) {
-            console.log(JSON.stringify(result['data'][0]['capital']));
+            console.log(JSON.stringify(result.data[0].geonames.capital));
             if (result.status.name == "ok") {  
-                $('#CapitalCity').html(JSON.stringify(result['data'][0]['capital']));
+                $('#CapitalCity').html(JSON.stringify(result.data[0].geonames.capital));
             }
         },
         error: function(jqXHR, textStatus, errorThrown) {
